@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import styled from 'styled-components';
+import Head from 'next/head';
 
 const pokemonCount = 721;
 
@@ -16,6 +17,9 @@ const pokemonDetail = ({
 }) => {
   return (
     <SContainer>
+      <Head>
+        <title>pokemon ssg</title>
+      </Head>
       <h2>{pokemonName}</h2>
       <p>重さ: {weight}</p>
       <p>高さ: {height}</p>
